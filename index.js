@@ -2,9 +2,9 @@ const path = require('path');
 const fs = require('hexo-fs');
 const CryptoJS = require("crypto-js");
 
-if (!hexo.config.foxglove_encrypt) return;
-if (!hexo.config.foxglove_encrypt.password) return;
-let PASSWORD = String(hexo.config.foxglove_encrypt.password);
+if (!hexo.config.all_encrypt) return;
+if (!hexo.config.all_encrypt.password) return;
+let PASSWORD = String(hexo.config.all_encrypt.password);
 
 hexo.extend.filter.register('after_render:html', function (str, data) {
     if (!/<body(.*?)>/.test(str)) return str;
@@ -29,7 +29,7 @@ hexo.extend.filter.register('after_render:html', function (str, data) {
 });
 
 hexo.extend.generator.register('foxglove-encrypt', function (locals) {
-    let config = this.config.foxglove_encrypt;
+    let config = this.config.all_encrypt;
     return [{
             path: 'lib/encrypt.js',
             data: () => fs.createReadStream(path.resolve(__dirname, 'lib/encrypt.js'))

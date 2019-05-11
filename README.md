@@ -6,7 +6,7 @@ npm install https://github.com/autoing/hexo-all-encrypt.git
 ```
 ### 站点配置
 ```
-foxglove_encrypt:
+all_encrypt:
   password: 123456
   trigger_event:
     # 解密后触发window.onload事件
