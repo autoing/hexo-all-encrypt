@@ -1,0 +1,41 @@
+{
+  "name": "hexo-all-encrypt",
+  "version": "0.1.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx webpack --watch --config webpack.config.js",
+    "build": "npx webpack --config webpack.build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/runtime-corejs2": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autoing/hexo-all-encrypt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/autoing/hexo-all-encrypt/issues"
+  },
+  "homepage": "https://github.com/autoing/hexo-all-encrypt#readme",
+  "description": ""
+}
